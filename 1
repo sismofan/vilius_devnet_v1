@@ -6,7 +6,7 @@ address(address) as (
 ), token_price_dec as (
     select date_trunc('day', minute) as time, symbol, contract_address, decimals, avg(price) as avg_price
     from prices.usd
-    where minute >= cast('2022-11-06' as TIMESTAMP) and minute < cast('2022-11-07' as TIMESTAMP)
+    where minute >= cast('2022-12-06' as TIMESTAMP) and minute < cast('2022-11-07' as TIMESTAMP)
         and blockchain = 'ethereum'
         and contract_address = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
         and symbol = 'WETH'
